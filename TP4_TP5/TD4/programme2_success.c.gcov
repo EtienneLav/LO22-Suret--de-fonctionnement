@@ -1,0 +1,21 @@
+        -:    0:Source:programme2.c
+        -:    0:Graph:programme2.gcno
+        -:    0:Data:programme2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:
+        1:    3:int main()
+        -:    4:{
+        -:    5:	int i, j, total;
+        -:    6:
+        1:    7:	scanf("%d",&j) ;
+        1:    8:	total = 0;
+        -:    9:
+       11:   10:	for (i = 0; i < j; i++)
+       10:   11:		total += i;
+        1:   12:	if (total == 45)
+        1:   13:		printf ("Success\n");
+        -:   14:
+        1:   15:	return 0;
+        -:   16:}

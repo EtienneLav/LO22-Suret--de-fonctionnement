@@ -1,0 +1,12 @@
+﻿IMPLEMENTATION
+   HelloWorldMain_imp
+REFINES
+   HelloWorldMain
+IMPORTS
+   BASIC_IO
+OPERATIONS
+   afficher =
+BEGIN
+   STRING_WRITE ( "Hello world\n" )
+   END
+END

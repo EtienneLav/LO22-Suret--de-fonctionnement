@@ -1,0 +1,54 @@
+<Machine name='Exemple1' type='abstraction'>
+<Abstract_Variables>
+<Id value='few' typref='3603043417'/>
+<Id value='many' typref='3603043417'/>
+</Abstract_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Id value='few' typref='3603043417'/>
+<Id value='NATURAL' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='many' typref='3603043417'/>
+<Id value='NATURAL' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='few' typref='3603043417'/>
+<Id value='many' typref='3603043417'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Assignement_Sub>
+<Variables>
+<Id value='few' typref='3603043417'/>
+<Id value='many' typref='3603043417'/>
+</Variables>
+<Values>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Integer_Literal value='2' typref='2701647786'/>
+<Integer_Literal value='3' typref='2701647786'/>
+</Nary_Exp>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Integer_Literal value='2' typref='2701647786'/>
+<Integer_Literal value='3' typref='2701647786'/>
+<Integer_Literal value='4' typref='2701647786'/>
+</Nary_Exp>
+</Values>
+</Assignement_Sub>
+</Initialisation>
+<TypeInfos>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+</TypeInfos>
+
+</Machine>

@@ -1,0 +1,14 @@
+<Machine name='HelloWorldMain' type='abstraction'>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='afficher'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos/>
+
+</Machine>

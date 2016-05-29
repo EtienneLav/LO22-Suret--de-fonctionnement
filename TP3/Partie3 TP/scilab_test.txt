@@ -1,0 +1,108 @@
+/// CALCUL MATRICIEL PARTIE3 3 LO22 TP3 ///
+
+-->l1 = 0.0001
+ l1  =
+ 
+    0.0001  
+ 
+-->l2 = 0.0004
+ l2  =
+ 
+    0.0004  
+ 
+-->m1 = 0.001
+ m1  =
+ 
+    0.001  
+ 
+-->m1 = 0.0011
+ m1  =
+ 
+    0.0011  
+ 
+-->m2 = 0.0014
+ m2  =
+ 
+    0.0014  
+ 
+-->A = [-l1-l2 l1 l2 0; m1 -m1-l2 0 l2; m2 0 -m2-l1 l1; 0 m2 m1 -m1-m2]
+ A  =
+ 
+  - 0.0005    0.0001    0.0004    0.      
+    0.0011  - 0.0015    0.        0.0004  
+    0.0014    0.      - 0.0015    0.0001  
+    0.        0.0014    0.0011  - 0.0025  
+ 
+-->b = [0; 0; 0; 0]
+ b  =
+ 
+    0.  
+    0.  
+    0.  
+    0.  
+ 
+-->id = ones(1,4)
+ id  =
+ 
+    1.    1.    1.    1.  
+ 
+-->ID = diag(id)
+ ID  =
+ 
+    1.    0.    0.    0.  
+    0.    1.    0.    0.  
+    0.    0.    1.    0.  
+    0.    0.    0.    1.  
+ 
+-->A2 = A - ID
+ A2  =
+ 
+  - 1.0005    0.0001    0.0004    0.      
+    0.0011  - 1.0015    0.        0.0004  
+    0.0014    0.      - 1.0015    0.0001  
+    0.        0.0014    0.0011  - 1.0025  
+ 
+-->resolchol(A2,b)
+ !--error 10000 
+A nest pas symetrique!
+at line       8 of function cholesky called by :  
+at line      13 of function resolchol called by :  
+resolchol(A2,b)
+
+
+***************************************************************************
+ 
+/// TEST DE RESOLCHOL AVEC UNE MATRICE SYMETRIQUE DEFINIE POSITIVE (voir exemple ci-dessous) ///
+ 
+-->M = [1 1; 1 2]
+ M  =
+ 
+    1.    1.  
+    1.    2.  
+ 
+-->n = [1 1]
+ n  =
+ 
+    1.    1.  
+ 
+-->resolchol(M,n)
+ ans  =
+ 
+    1.  
+    0.  
+
+TEST OK !!!
+
+***************************************************************************
+
+/// TEST DE RESOLCHOL SANS VERIFICATION DE SDF ///
+ 
+-->resolchol(A2,b)
+ ans  =
+ 
+    0  
+    0  
+    0  
+    0  
+
+Solution : seulement le vecteur nul

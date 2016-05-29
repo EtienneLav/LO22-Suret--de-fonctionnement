@@ -1,0 +1,31 @@
+<Machine name='HelloWorldMain_imp' type='implementation'>
+<Abstraction>HelloWorldMain</Abstraction>
+<Imports>
+<Referenced_Machine>
+<Name>BASIC_IO</Name>
+</Referenced_Machine>
+</Imports>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='afficher'>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Hello world\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3239339507'>
+<Id value='STRING'/>
+</Type>
+</TypeInfos>
+
+</Machine>

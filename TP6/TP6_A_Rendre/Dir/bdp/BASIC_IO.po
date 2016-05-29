@@ -1,0 +1,19 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((nn) : (INT)) & ((mm) : (INT)) & (mm <= nn);
+((bb$1) : (((mm) .. (nn))));
+((vv) : (INT));
+((bb$1) : (BOOL));
+((bb) : (BOOL));
+((cc$1) : (((0) .. (255))));
+((cc) : (((0) .. (255))));
+((ss) : (STRING));
+((mm) : (INT));
+((nn) : (INT))
+END
+&
+THEORY EnumerateX
+END
