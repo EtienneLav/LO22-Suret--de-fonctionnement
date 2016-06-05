@@ -1,0 +1,170 @@
+<Machine name='Freinage_urgence_imp' type='implementation'>
+<Abstraction>freinage_urgence_raf</Abstraction>
+<Values>
+<Valuation ident='POS' typref='3603043417'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='100' typref='2701647786'/>
+</Binary_Exp>
+</Valuation>
+</Values>
+<Concrete_Variables>
+<Id value='arr' typref='2701647786'/>
+<Id value='avt' typref='2701647786'/>
+<Id value='deb' typref='2701647786'/>
+<Id value='fin' typref='2701647786'/>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Concrete_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='arr' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='avt' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='deb' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='fin' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='position_train' typref='3603043417'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Id value='arr' typref='2701647786'/>
+<Id value='avt' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='zone_interdite' typref='3603043417'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Id value='deb' typref='2701647786'/>
+<Id value='fin' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='arr' typref='2701647786'/>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='avt' typref='2701647786'/>
+</Variables>
+<Values>
+<Integer_Literal value='10' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='deb' typref='2701647786'/>
+</Variables>
+<Values>
+<Integer_Literal value='50' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='fin' typref='2701647786'/>
+</Variables>
+<Values>
+<Integer_Literal value='80' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='&gt;'>
+<Id value='deb' typref='2701647786'/>
+<Id value='fin' typref='2701647786'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Variables>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Exp_Comparison op='&lt;'>
+<Id value='avt' typref='2701647786'/>
+<Id value='deb' typref='2701647786'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Variables>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Exp_Comparison op='&gt;'>
+<Id value='arr' typref='2701647786'/>
+<Id value='fin' typref='2701647786'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Variables>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Else>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Initialisation>
+<TypeInfos>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>

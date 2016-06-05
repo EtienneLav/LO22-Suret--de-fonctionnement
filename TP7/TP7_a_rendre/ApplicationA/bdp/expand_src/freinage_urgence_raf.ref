@@ -1,0 +1,12 @@
+﻿/* freinage_urgence_raf
+ * Author: 
+ * Creation date: 05/06/2016
+ */
+
+REFINEMENT freinage_urgence_raf
+REFINES Freinage_urgence_mach
+ABSTRACT_VARIABLES position_train , zone_interdite , freinage_urgence
+INITIALISATION
+position_train , zone_interdite : ( position_train <: POS & zone_interdite <: POS )
+|| freinage_urgence := bool ( position_train /\ zone_interdite /= {} )
+END

@@ -1,0 +1,20 @@
+THEORY ProofList IS
+_f(1) & _f(2) & Initialisation.1,(_f(4) & _f(5) & _f(3) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+POS: FIN(INTEGER) & not(POS = {});
+not(((zone_interdite$3) /\ (position_train$3)) = {});
+position_train$3 : POW( POS);
+zone_interdite$3 : POW( POS);
+((bool(not(((position_train$1) /\ (zone_interdite$1)) = {}))) = (TRUE));
+position_train : POW( POS) & zone_interdite : POW( POS) & ((freinage_urgence) : (BOOL)) & ((not(((zone_interdite) /\ (position_train)) = {})) => (((freinage_urgence) = (TRUE))));
+((zone_interdite) = (zone_interdite$1));
+((position_train) = (position_train$1));
+((position_train) = (position_train$1)) & ((zone_interdite) = (zone_interdite$1)) & ((freinage_urgence) = (freinage_urgence$1));
+position_train$1 : POW( POS)
+END
+&
+THEORY EnumerateX
+END

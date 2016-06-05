@@ -1,0 +1,57 @@
+<Machine name='freinage_urgence_raf' type='refinement'>
+<Abstraction>Freinage_urgence_mach</Abstraction>
+<Abstract_Variables>
+<Id value='position_train' typref='3585833359'/>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Abstract_Variables>
+<Initialisation>
+<Nary_Sub op='||'>
+<Becomes_Such_That>
+<Variables>
+<Id value='position_train' typref='3585833359'/>
+<Id value='zone_interdite' typref='3585833359'/>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Id value='position_train' typref='3585833359'/>
+<Id value='POS' typref='3585833359'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='POS' typref='3585833359'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+<Assignement_Sub>
+<Variables>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Exp typref='2043437594'>
+<Exp_Comparison op='/='>
+<Binary_Exp op='/\' typref='3585833359'>
+<Id value='position_train' typref='3585833359'/>
+<Id value='zone_interdite' typref='3585833359'/>
+</Binary_Exp>
+<EmptySet typref='3585833359'/>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<TypeInfos>
+<Type id='3585833359'>
+<Unary_Exp op='POW'>
+<Id value='POS'/>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>

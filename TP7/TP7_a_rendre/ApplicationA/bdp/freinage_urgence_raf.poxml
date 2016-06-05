@@ -1,0 +1,352 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=" initialTag="((position_train) = (position_train$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1" typref="3585833359" value="position_train"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1" typref="3585833359" value="position_train"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((zone_interdite) = (zone_interdite$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2" typref="3585833359" value="zone_interdite"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2" typref="3585833359" value="zone_interdite"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((freinage_urgence) = (freinage_urgence$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:3" typref="2043437594" value="freinage_urgence"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:3" typref="2043437594" value="freinage_urgence"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="mchcst"/>
+<Define name="aprp">
+<Set>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:1:1:1" typref="3585833359" value="POS"/>
+</Set>
+</Define>
+<Define name="abs">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="position_train : POW( POS)">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:1:1" typref="3585833359" value="position_train"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:1:2" typref="3585833359" value="POS"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="zone_interdite : POW( POS)">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:2:1" typref="3585833359" value="zone_interdite"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:2:2" typref="3585833359" value="POS"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((freinage_urgence) : (BOOL))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:3:1" typref="2043437594" value="freinage_urgence"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((not(((zone_interdite) /\ (position_train)) = {})) =&gt; (((freinage_urgence) = (TRUE))))">
+<Exp_Comparison op="/=">
+<Binary_Exp op="/\" typref="3585833359">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:4:1:1:1" typref="3585833359" value="zone_interdite"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:4:1:1:2" typref="3585833359" value="position_train"/>
+</Binary_Exp>
+<EmptySet tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:4:1:2" typref="3585833359"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:4:2:1" typref="2043437594" value="freinage_urgence"/>
+<Boolean_Literal tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:3:1:4:2:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Define>
+<Proof_Obligation>
+<Comment>Initialisation dans un raffinement</Comment>
+<Tag>Initialisation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Nary_Sub op="||">
+<Becomes_Such_That>
+<Variables>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:1:1," typref="3585833359" value="position_train"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:1:2," typref="3585833359" value="zone_interdite"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:">
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:2:1:1:1," typref="3585833359" value="position_train"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:2:1:1:2" typref="3585833359" value="POS"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:">
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:2:1:2:1," typref="3585833359" value="zone_interdite"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:2:1:2:2" typref="3585833359" value="POS"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:3,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:2:1:1," typref="2043437594" value="freinage_urgence"/>
+</Variables>
+<Values>
+<Boolean_Exp typref="2043437594">
+<Exp_Comparison op="/=">
+<Binary_Exp op="/\" typref="3585833359">
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:2:2:1:1:1:1," typref="3585833359" value="position_train"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:2:2:1:1:1:2," typref="3585833359" value="zone_interdite"/>
+</Binary_Exp>
+<EmptySet tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:2:2:1:1:2" typref="3585833359"/>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Becomes_Such_That>
+<Variables>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:1:1" typref="3585833359" value="position_train"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:1:2" typref="3585833359" value="zone_interdite"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:1:3" typref="2043437594" value="freinage_urgence"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:1:1" typref="3585833359" value="position_train"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:1:2" typref="3585833359" value="POS"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:2:1" typref="3585833359" value="zone_interdite"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:2:2" typref="3585833359" value="POS"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:3:1" typref="2043437594" value="freinage_urgence"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/=">
+<Binary_Exp op="/\" typref="3585833359">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:4:1:1:1" typref="3585833359" value="zone_interdite"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:4:1:1:2" typref="3585833359" value="position_train"/>
+</Binary_Exp>
+<EmptySet tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:4:1:2" typref="3585833359"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:4:2:1" typref="2043437594" value="freinage_urgence"/>
+<Boolean_Literal tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:4:1:2:1:4:2:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+</Nary_Sub>
+<Not>
+<Tag goalTag="Refinement is correct">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=" initialTag="((position_train) = (position_train$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1" typref="3585833359" value="position_train"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1" typref="3585833359" value="position_train"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((zone_interdite) = (zone_interdite$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2" typref="3585833359" value="zone_interdite"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2" typref="3585833359" value="zone_interdite"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((freinage_urgence) = (freinage_urgence$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:3" typref="2043437594" value="freinage_urgence"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:3" typref="2043437594" value="freinage_urgence"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((position_train) = (position_train$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1" typref="3585833359" value="position_train"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1" typref="3585833359" value="position_train"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((zone_interdite) = (zone_interdite$1))">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2" typref="3585833359" value="zone_interdite"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2" typref="3585833359" value="zone_interdite"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Quantified_Pred type="!">
+<Variables>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:1:1," typref="3585833359" value="position_train"/>
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:2,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:1:2," typref="3585833359" value="zone_interdite"/>
+</Variables>
+<Body>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;:">
+<Id suffix="1" tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:2:1,/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:2:1:1:1," typref="3585833359" value="position_train"/>
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:3:1:1:2:1:1:2" typref="3585833359" value="POS"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Body>
+</Quantified_Pred>
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="3585833359">
+<Unary_Exp op="POW">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:4:1:1:1" value="POS"/>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/freinage_urgence_raf.bxml:1:4:2:1" value="BOOL"/>
+</Type>
+<Type id="3585833359">
+<Unary_Exp op="POW">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:5:1:1:1" value="POS"/>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:5:2:1" value="BOOL"/>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id tag="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/Freinage_urgence_mach.bxml:1:5:3:1:1" value="BOOL"/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

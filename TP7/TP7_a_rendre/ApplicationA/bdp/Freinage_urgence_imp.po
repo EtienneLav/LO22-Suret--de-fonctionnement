@@ -1,0 +1,70 @@
+THEORY ProofList IS
+_f(1) & _f(4) & _f(5) & Initialisation.28,(_f(11) & _f(10) & _f(9) & _f(14) & _f(23) => _f(25));
+_f(1) & _f(4) & _f(5) & Initialisation.27,(_f(11) & _f(10) & _f(9) & _f(14) & _f(21) => _f(22));
+_f(1) & _f(4) & _f(5) & Initialisation.26,(_f(11) & _f(10) & _f(9) & _f(14) & _f(19) => _f(20));
+_f(1) & _f(4) & _f(5) & Initialisation.25,(_f(11) & _f(10) & _f(9) & _f(14) & _f(17) => _f(18));
+_f(1) & _f(4) & _f(5) & Initialisation.24,(_f(11) & _f(10) & _f(9) & _f(14) & _f(15) => _f(16));
+_f(1) & _f(4) & _f(5) & Initialisation.23,(_f(11) & _f(10) & _f(9) => _f(13));
+_f(1) & _f(4) & _f(5) & Initialisation.22,(_f(11) & _f(10) & _f(9) => _f(12));
+_f(1) & _f(4) & _f(5) & Initialisation.21,(_f(11) & _f(10) & _f(8) & _f(14) & _f(23) => _f(24));
+_f(1) & _f(4) & _f(5) & Initialisation.20,(_f(11) & _f(10) & _f(8) & _f(14) & _f(21) => _f(22));
+_f(1) & _f(4) & _f(5) & Initialisation.19,(_f(11) & _f(10) & _f(8) & _f(14) & _f(19) => _f(20));
+_f(1) & _f(4) & _f(5) & Initialisation.18,(_f(11) & _f(10) & _f(8) & _f(14) & _f(17) => _f(18));
+_f(1) & _f(4) & _f(5) & Initialisation.17,(_f(11) & _f(10) & _f(8) & _f(14) & _f(15) => _f(16));
+_f(1) & _f(4) & _f(5) & Initialisation.16,(_f(11) & _f(10) & _f(8) => _f(13));
+_f(1) & _f(4) & _f(5) & Initialisation.15,(_f(11) & _f(10) & _f(8) => _f(12));
+_f(1) & _f(4) & _f(5) & Initialisation.14,(_f(11) & _f(7) & _f(14) & _f(23) => _f(24));
+_f(1) & _f(4) & _f(5) & Initialisation.13,(_f(11) & _f(7) & _f(14) & _f(21) => _f(22));
+_f(1) & _f(4) & _f(5) & Initialisation.12,(_f(11) & _f(7) & _f(14) & _f(19) => _f(20));
+_f(1) & _f(4) & _f(5) & Initialisation.11,(_f(11) & _f(7) & _f(14) & _f(17) => _f(18));
+_f(1) & _f(4) & _f(5) & Initialisation.10,(_f(11) & _f(7) & _f(14) & _f(15) => _f(16));
+_f(1) & _f(4) & _f(5) & Initialisation.9,(_f(11) & _f(7) => _f(13));
+_f(1) & _f(4) & _f(5) & Initialisation.8,(_f(11) & _f(7) => _f(12));
+_f(1) & _f(4) & _f(5) & Initialisation.7,(_f(6) & _f(14) & _f(23) => _f(24));
+_f(1) & _f(4) & _f(5) & Initialisation.6,(_f(6) & _f(14) & _f(21) => _f(22));
+_f(1) & _f(4) & _f(5) & Initialisation.5,(_f(6) & _f(14) & _f(19) => _f(20));
+_f(1) & _f(4) & _f(5) & Initialisation.4,(_f(6) & _f(14) & _f(17) => _f(18));
+_f(1) & _f(4) & _f(5) & Initialisation.3,(_f(6) & _f(14) & _f(15) => _f(16));
+_f(1) & _f(4) & _f(5) & Initialisation.2,(_f(6) => _f(13));
+_f(1) & _f(4) & _f(5) & Initialisation.1,(_f(6) => _f(12));
+_f(1) & ValuesLemmas.1,(_f(2) => _f(3))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+"Valuation is correct";
+((0) .. (100)): FIN(INTEGER) & not(((0) .. (100)) = {});
+POS: FIN(INTEGER) & not(POS = {});
+((POS) = (((0) .. (100))));
+(80 +1 <= 50);
+(10 +1 <= 50);
+(80 +1 <= 0);
+not((80 +1 <= 0));
+not((10 +1 <= 50));
+not((80 +1 <= 50));
+((0) .. (10)) : POW( POS);
+((50) .. (80)) : POW( POS);
+"Refinement is correct";
+"Check invariant ((arr$1) : (NAT))";
+((0) : (NAT));
+"Check invariant ((avt$1) : (NAT))";
+((10) : (NAT));
+"Check invariant ((deb$1) : (NAT))";
+((50) : (NAT));
+"Check invariant ((fin$1) : (NAT))";
+((80) : (NAT));
+"Check invariant ((freinage_urgence) = (freinage_urgence$1))";
+((bool(not(((position_train) /\ (zone_interdite)) = {}))) = (FALSE));
+((bool(not(((position_train) /\ (zone_interdite)) = {}))) = (TRUE));
+position_train : POW( POS) & zone_interdite : POW( POS) & ((freinage_urgence) : (BOOL)) & ((not(((zone_interdite) /\ (position_train)) = {})) => (((freinage_urgence) = (TRUE))));
+((zone_interdite) = (((deb$1) .. (fin$1))));
+((position_train) = (((arr$1) .. (avt$1))));
+((fin$1) : (NAT));
+((deb$1) : (NAT));
+((avt$1) : (NAT));
+((arr$1) : (NAT));
+((arr$1) : (NAT)) & ((avt$1) : (NAT)) & ((deb$1) : (NAT)) & ((fin$1) : (NAT)) & ((position_train) = (((arr$1) .. (avt$1)))) & ((zone_interdite) = (((deb$1) .. (fin$1)))) & ((freinage_urgence) = (freinage_urgence$1))
+END
+&
+THEORY EnumerateX
+END

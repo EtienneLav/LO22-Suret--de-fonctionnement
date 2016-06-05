@@ -1,0 +1,95 @@
+<Machine name='Freinage_urgence_mach' type='abstraction'>
+<Sets>
+<Set>
+<Id value='POS' typref='3585833359'/>
+</Set>
+</Sets>
+<Abstract_Variables>
+<Id value='position_train' typref='3585833359'/>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Abstract_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Id value='position_train' typref='3585833359'/>
+<Id value='POS' typref='3585833359'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='POS' typref='3585833359'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='freinage_urgence' typref='2043437594'/>
+<Id value='BOOL' typref='4282494527'/>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='/='>
+<Binary_Exp op='/\' typref='3585833359'>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='position_train' typref='3585833359'/>
+</Binary_Exp>
+<EmptySet typref='3585833359'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='freinage_urgence' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Becomes_Such_That>
+<Variables>
+<Id value='position_train' typref='3585833359'/>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='freinage_urgence' typref='2043437594'/>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Id value='position_train' typref='3585833359'/>
+<Id value='POS' typref='3585833359'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='POS' typref='3585833359'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='freinage_urgence' typref='2043437594'/>
+<Id value='BOOL' typref='4282494527'/>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='/='>
+<Binary_Exp op='/\' typref='3585833359'>
+<Id value='zone_interdite' typref='3585833359'/>
+<Id value='position_train' typref='3585833359'/>
+</Binary_Exp>
+<EmptySet typref='3585833359'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='freinage_urgence' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+</Initialisation>
+<TypeInfos>
+<Type id='3585833359'>
+<Unary_Exp op='POW'>
+<Id value='POS'/>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+<Type id='4282494527'>
+<Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

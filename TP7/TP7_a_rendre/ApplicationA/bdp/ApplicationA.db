@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/expand_src" old_decomp_dir="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA/bdp/src">
+        <!-- Definition directory list -->
+        <!-- Component file list -->
+        <component_file path="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA" name="Freinage_urgence_imp" suffix="imp" user="EtienneLaviolette">
+            <component name="Freinage_urgence_imp" type="implementation" />
+        </component_file>
+        <component_file path="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA" name="Freinage_urgence_mach" suffix="mch" user="EtienneLaviolette">
+            <component name="Freinage_urgence_mach" type="specification" />
+        </component_file>
+        <component_file path="/Users/EtienneLaviolette/Documents/LO22/repo_perso/LO22-Surete-de-fonctionnement/TP7/TP7_a_rendre/ApplicationA" name="freinage_urgence_raf" suffix="ref" user="EtienneLaviolette">
+            <component name="freinage_urgence_raf" type="refinement" />
+        </component_file>
+    </project>
+</db_xml>

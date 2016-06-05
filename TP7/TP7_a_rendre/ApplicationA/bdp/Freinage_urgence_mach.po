@@ -1,0 +1,23 @@
+THEORY ProofList IS
+_f(1) & _f(2) & Initialisation.1,(_f(4) & _f(5) & _f(6) & _f(7) & _f(3) & _f(8) => _f(9))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+POS: FIN(INTEGER) & not(POS = {});
+not(((zone_interdite$1) /\ (position_train$1)) = {});
+position_train$1 : POW( POS);
+zone_interdite$1 : POW( POS);
+((freinage_urgence$1) : (BOOL));
+((not(((zone_interdite$1) /\ (position_train$1)) = {})) => (((freinage_urgence$1) = (TRUE))));
+"Invariant is preserved";
+((freinage_urgence$1) = (TRUE));
+not(((zone_interdite) /\ (position_train)) = {});
+((freinage_urgence) : (BOOL));
+zone_interdite : POW( POS);
+position_train : POW( POS);
+position_train : POW( POS) & zone_interdite : POW( POS) & ((freinage_urgence) : (BOOL)) & ((not(((zone_interdite) /\ (position_train)) = {})) => (((freinage_urgence) = (TRUE))))
+END
+&
+THEORY EnumerateX
+END
